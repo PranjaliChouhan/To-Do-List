@@ -1,0 +1,266 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*first div*/
+.wrap{
+  padding: 5rem;
+/*second div*/  
+}
+.to-do{
+  color:rgb(180, 180, 200);
+  background-color: rgb(219, 214, 223);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:0.5rem;
+  border-radius: 1rem;
+  
+  
+  
+}
+/*Animation added to h1*/
+.to-do h1{
+  color:white;
+  font-size: 50px;
+  animation: glow 1000ms infinite alternate;
+
+}
+
+@keyframes glow{
+  from{
+    text-shadow: 0 0 10px plum,
+                 0 0 20px rgb(140, 41, 189),
+                 0 0 30px rgb(186, 34, 176);
+  }
+  to{
+    text-shadow: 0 0 5px plum,
+                 0 0 10px rgb(140, 41, 189),
+                 0 0 15px rgb(186, 34, 176);
+                
+
+  }
+}
+
+
+/*input.js*/
+.put-items {
+  color:rgb(90, 15, 111);
+  font-size: larger;
+  text-shadow: 2px 2px 2px rgb(226, 172, 232);
+  flex-wrap: wrap;
+ }
+ /*add-to-do*/
+.put-items input{
+  width:30vw;
+  height:2.5rem;
+  box-shadow:5px 5px 5px white;
+  border-radius: 1rem;
+  
+  
+}
+  
+/*add-button*/
+.put-items button{
+  width: 10vw;
+  height:2.9rem;
+  box-shadow:5px 5px 5px white;
+  margin: 10px;
+  border-radius: 1rem;
+  
+  padding: 0.7rem;
+}
+.put-items button:hover{
+  background-color:rgb(182, 158, 193);
+
+}  
+
+/*added-items*/
+.inp{
+  display:flex;
+}
+
+.inp span{
+  font-size: larger;
+  margin:10px;
+  
+  
+}
+.inp li{
+  max-width: 500px;
+  background-color: white;
+  padding: 1.5rem;
+  
+  margin-bottom: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 1rem;
+  list-style: none;
+
+}
+/*remove*/
+.inp button{
+  margin: 10px;
+  font-size: larger;
+  border-radius: 0.25rem;
+  display:flex;
+  padding:0.25rem;
+
+
+}
+.inp button:hover{
+  background-color:rgb(56, 36, 56);
+  color:rgb(225, 200, 220);
+  box-shadow: 0 0 5px plum,
+              0 0 25px plum,
+              0 0 50px  plum,
+              0 0 60px plum;
+  -webkit-box-reflect: below 1 px
+  linear-gradient(transparent,rgb(186, 201, 216))           
+}
+
+
+
+/* Hide the default checkbox */
+.check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border-radius: 5px;
+ }
+ 
+ .check {
+  
+  width: 50px;
+  height: 0px;
+  position:relative;
+  top:10px;
+  right: 25px;
+  
+  
+  font-size: larger;
+  
+  display: block;
+
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0px rgb(183, 183, 183);
+ }
+ 
+ /* Create a custom checkbox */
+ .checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  border-radius: 5px;
+ }
+ 
+ /* When the checkbox is checked, add a blue background */
+ .check input:checked ~ .checkmark {
+  box-shadow: 3px 3px 0px rgb(183, 183, 183);
+  transition: all 0.2s;
+  opacity: 1;
+  background-image: linear-gradient(45deg, rgb(100, 61, 219) 0%, rgb(217, 21, 239) 100%);
+ }
+ 
+ .check input ~ .checkmark {
+  transition: all 0.2s;
+  opacity: 1;
+  box-shadow: 1px 1px 0px rgb(183, 183, 183);
+ }
+ 
+ /* Create the checkmark/indicator (hidden when not checked) */
+ .checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: all 0.2s;
+ }
+ 
+ /* Show the checkmark when checked */
+ .check input:checked ~ .checkmark:after {
+  opacity: 1;
+  transition: all 0.2s;
+ }
+ 
+ /* Style the checkmark/indicator */
+ .check .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+ }
+
+
+/*input-text*/
+ .todo-text {
+  word-break: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  position: relative;
+  color:black;
+  
+}
+@media (max-width: 768px) {
+  .todo-text {
+    word-wrap: break-word;
+    display:flex;
+    
+  }
+}
+
+/*remove-icon*/
+.action{
+  display:flex;
+  flex-direction: column;
+  
+}
+.action svg{
+  width:16px;
+}
