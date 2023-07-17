@@ -54,10 +54,7 @@ function Input() {
 
           
              <li key={index}>
-           
-           
-           
-            <span  className="todo-text"
+           <span  className="todo-text"
               style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
               onClick={() => completeTodo(index)}
             >
